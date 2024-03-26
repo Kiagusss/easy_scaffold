@@ -1,3 +1,3 @@
-## 0.0.2
+## 0.0.5
 
-* Added Custom button Widget
+* fix typo name widget

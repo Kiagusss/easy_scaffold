@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ButtonWiget extends StatelessWidget {
+class ButtonWidget extends StatelessWidget {
   final Color? backGroundColor;
   final String? text;
   final Color? borderColor;
@@ -9,8 +9,12 @@ class ButtonWiget extends StatelessWidget {
   final EdgeInsets? padding;
   final double? fontSize;
   final double? borderWidth;
+  final Widget? child;
+  final double? borderRadius;
+
   final IconData? icon;
-  const ButtonWiget({
+
+  const ButtonWidget({
     super.key,
     this.backGroundColor,
     this.text,
@@ -21,30 +25,28 @@ class ButtonWiget extends StatelessWidget {
     this.fontSize,
     this.borderWidth,
     this.icon,
+    this.child,
+    this.borderRadius,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        onPressed;
-      },
-      style: ElevatedButton.styleFrom(
+        onPressed: () {
+          onPressed;
+        },
+        style: ElevatedButton.styleFrom(
           padding: padding ?? const EdgeInsets.all(16),
           backgroundColor: backGroundColor ?? Colors.blue,
           side: BorderSide(
             color: borderColor ?? Colors.black,
             width: borderWidth ?? 0,
-          )),
-      child: icon != null
-          ? Icon(icon)
-          : Text(
-              text ?? "none",
-              style: TextStyle(
-                color: textColor ?? Colors.white,
-                fontSize: fontSize ?? 20,
-              ),
-            ),
-    );
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+                borderRadius ?? 0), // Tambahkan borderRadius ke dalam shape
+          ),
+        ),
+        child: child);
   }
 }
