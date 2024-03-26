@@ -1,10 +1,10 @@
 name: easy_scaffold
-description: "A new Flutter package project."
-version: 0.0.1
-homepage: "https://sarangheo5.wordpress.com"
+description: "Easy Scaffold for your developing."
+version: 0.0.2
+homepage: https://github.com/Kiagusss/easy_scaffold
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: ">=3.3.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
