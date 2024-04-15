@@ -1,6 +1,6 @@
 name: easy_scaffold
 description: "Easy Scaffold for your developing."
-version: 0.0.5
+version: 0.0.12
 homepage: https://github.com/Kiagusss/easy_scaffold
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.6
   google_fonts: ^6.2.1
 
 dev_dependencies:

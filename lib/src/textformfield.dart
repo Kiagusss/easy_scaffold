@@ -3,6 +3,7 @@ import 'package:easy_scaffold/src/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class TextFormFieldWidget extends StatelessWidget {
   final String label;
   final double? labelFontSize;
@@ -102,7 +103,7 @@ class TextFormFieldWidget extends StatelessWidget {
                   hintText: hint ?? label,
                   suffixIcon: suffixIcon,
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: colorLightBlue),
+                    borderSide: BorderSide(color: colorLightTextSecondary),
                   ),
                   prefix: prefix,
                   suffix: suffix,
@@ -121,13 +122,13 @@ class TextFormFieldWidget extends StatelessWidget {
                     borderSide: BorderSide(color: colorTextPrimary),
                   ),
                   suffixIcon: suffixIcon,
-                  suffixIconColor: colorLightBlue,
+                  suffixIconColor: colorLightTextSecondary,
                   focusedBorder: OutlineInputBorder(
                     borderRadius:
                         radius ?? const BorderRadius.all(Radius.circular(4)),
                     borderSide: BorderSide(
                       color: borderColor ??
-                          (readOnly ? Colors.grey : colorLightBlue),
+                          (readOnly ? Colors.grey : colorLightTextSecondary),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(

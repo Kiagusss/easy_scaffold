@@ -5,13 +5,12 @@ class ButtonWidget extends StatelessWidget {
   final String? text;
   final Color? borderColor;
   final Color? textColor;
-  final Function? onPressed;
+  final Function onPressed;
   final EdgeInsets? padding;
   final double? fontSize;
   final double? borderWidth;
   final Widget? child;
   final double? borderRadius;
-
   final IconData? icon;
 
   const ButtonWidget({
@@ -20,7 +19,7 @@ class ButtonWidget extends StatelessWidget {
     this.text,
     this.borderColor,
     this.textColor,
-    this.onPressed,
+    required this.onPressed,
     this.padding,
     this.fontSize,
     this.borderWidth,
@@ -33,7 +32,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {
-          onPressed;
+          onPressed();
         },
         style: ElevatedButton.styleFrom(
           padding: padding ?? const EdgeInsets.all(16),
@@ -43,8 +42,7 @@ class ButtonWidget extends StatelessWidget {
             width: borderWidth ?? 0,
           ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-                borderRadius ?? 0), // Tambahkan borderRadius ke dalam shape
+            borderRadius: BorderRadius.circular(borderRadius ?? 0),
           ),
         ),
         child: child);
