@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-void backPage() => Navigator.of(Get.context!).pop();
 
-void backPageWithResult(dynamic result) =>
-    Navigator.of(Get.context!).pop(result);
+void backPage(context) => Navigator.pop(context!);
 
-void openPage(Widget page) => Navigator.push(
-      Get.context!,
+void backPageWithResult(dynamic result, context) =>
+    Navigator.of(context!).pop(result);
+
+void openPage(Widget page, context) => Navigator.push(
+      context!,
       MaterialPageRoute(builder: (context) => page),
     );
 
-Future<dynamic> openPageWithResult(Widget page) async {
+Future<dynamic> openPageWithResult(Widget page, context) async {
   return await Navigator.push(
-    Get.context!,
+    context!,
     MaterialPageRoute(builder: (context) => page),
   );
 }
-

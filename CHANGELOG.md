@@ -1,3 +1,3 @@
-## 0.0.12
+## 0.0.14
 
-* add navigator
+- fix navigator

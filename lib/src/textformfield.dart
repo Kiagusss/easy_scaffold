@@ -12,6 +12,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final bool obscureText;
   final TextInputType textInputType;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final Widget? prefix;
   final Widget? suffix;
   final bool isWithLabel;
@@ -40,6 +41,7 @@ class TextFormFieldWidget extends StatelessWidget {
     this.obscureText = false,
     this.textInputType = TextInputType.text,
     this.suffixIcon,
+    this.prefixIcon,
     this.suffix,
     this.focusNode,
     this.isWithLabel = true,
@@ -102,6 +104,7 @@ class TextFormFieldWidget extends StatelessWidget {
                       padding ?? const EdgeInsets.fromLTRB(0, 10, 0, 10),
                   hintText: hint ?? label,
                   suffixIcon: suffixIcon,
+                  prefixIcon: prefixIcon,
                   focusedBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(color: colorLightTextSecondary),
                   ),
@@ -122,6 +125,7 @@ class TextFormFieldWidget extends StatelessWidget {
                     borderSide: BorderSide(color: colorTextPrimary),
                   ),
                   suffixIcon: suffixIcon,
+                  prefixIcon: prefixIcon,
                   suffixIconColor: colorLightTextSecondary,
                   focusedBorder: OutlineInputBorder(
                     borderRadius:
